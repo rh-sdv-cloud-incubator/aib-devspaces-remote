@@ -9,7 +9,7 @@ projects:
     - name: aib-devspaces
       git:
           remotes:
-              origin: https://github.com/liranr23/devspace.git
+              origin: https://github.com/rh-sdv-cloud-incubator/aib-devspaces-remote.git
 components:
     - name: runtime
       container:
