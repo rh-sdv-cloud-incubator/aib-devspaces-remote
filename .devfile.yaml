@@ -23,4 +23,12 @@ components:
                 value: "/home/user/.kube/config"
               - name: JMP_CLIENT_CONFIG_HOME
                 value: "/home/user/.jumpstarter"
-
+commands:
+  - id: copy-jmp-client
+    exec:
+      component: runtime
+      commandLine: "bash ./cp_jmp_client.sh"
+      workingDir: ${PROJECT_SOURCE}
+events:
+  postStart:
+    - copy-jmp-client
